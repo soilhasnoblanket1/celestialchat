@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+:root {
+  --dark-color-a: #2b0236;
+  --dark-color-b: #2d0052;
+  --light-color: #6d0693;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background:linear-gradient(to bottom, rgba(228, 227, 228, 0.486), rgb(0, 0, 0, 0.658)),url('../Images/background.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  margin: 20px;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 5px 15px;
+  background: var(--light-color);
+  color: var(--dark-color-a);
+  border: 0;
+  font-size: 17px;
+}
+
+/* Chat Page */
+
+.chat-container {
+  max-width: 1100px;
+  background: #000000;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),
+    0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11),
+    0 16px 16px rgba(0, 0, 0, 0.11), 0 32px 32px rgba(0, 0, 0, 0.11);
+}
+
+.chat-header {
+  background: var(--dark-color-a);
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-main {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.chat-sidebar {
+  background: var(--dark-color-b);
+  color: #fff;
+  padding: 20px 20px 60px;
+  overflow-y: scroll;
+}
+
+.chat-sidebar h2 {
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.chat-sidebar h3 {
+  margin-bottom: 15px;
+}
+
+.chat-sidebar ul li {
+  padding: 10px 0;
+}
+
+.chat-messages {
+  padding: 30px;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.chat-messages .message {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+.chat-messages .message .meta {
+  font-size: 15px;
+  font-weight: bold;
+  color: #370F08;
+  opacity: 0.7;
+  margin-bottom: 7px;
+}
+
+.chat-messages .message .meta span {
+  color: #777;
+}
+
+.chat-form-container {
+  padding: 20px 30px;
+  background-color: var(--dark-color-a);
+}
+
+.chat-form-container form {
+  display: flex;
+}
+
+.chat-form-container input[type="text"] {
+  font-size: 16px;
+  padding: 5px;
+  height: 40px;
+  flex: 1;
+}
+
+/* Join Page */
+.join-container {
+  max-width: 500px;
+  margin: 80px auto;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),
+    0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11),
+    0 16px 16px rgba(0, 0, 0, 0.11), 0 32px 32px rgba(0, 0, 0, 0.11);
+}
+
+.join-header {
+  text-align: center;
+  padding: 20px;
+  background: var(--dark-color-a);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.logo-img {
+  margin-bottom: -8px;
+  margin-right: 10px;
+}
+
+.join-main {
+  padding: 30px 40px;
+  background: var(--dark-color-b);
+}
+
+.join-main p {
+  margin-bottom: 20px;
+}
+
+.join-main .form-control {
+  margin-bottom: 20px;
+}
+
+.join-main label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.join-main input[type="text"] {
+  font-size: 16px;
+  padding: 5px;
+  height: 40px;
+  width: 100%;
+}
+
+.join-main select {
+  font-size: 16px;
+  padding: 5px;
+  height: 40px;
+  width: 100%;
+}
+
+.join-main .btn {
+  margin-top: 20px;
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .chat-main {
+    display: block;
+  }
+
+  .chat-sidebar {
+    display: none;
+  }
+}
+
+/* footer */
+.footer-container{
+  color: #370F08;
+  font-size: 0.7em;
+  text-align: center;
+  position: fixed;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.reddit {
+  margin-right: 10px;
+}
+.spotify {
+  margin-right: 10px;
+}
+.youtube {
+  margin-right: 10px;
+}
+
+@media(max-width: 700px){
+  footer{
+    display: none;
+  }
+}
+
+
+/* Media Queries */    
+@media (max-width: 768px) {
+html{
+    font-size:55%;
+}
+#characterCount {
+  font-size: 12px;
+}
+#menu-btn {
+  display: initial;
+}
+#menu-btn.fa-times {
+  transform: rotate(180deg);
+}
+#logo {
+    display:block;
+    margin: 0 auto;
+    text-align: center;
+}
+#navbar{
+  display:block;
+}
+.header .navbar {
+  position:absolute;
+  top: 99%;
+  left: 0;
+  right: 0;
+  background: #FFF8DC;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.header .navbar.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.header .navbar a {
+  display: block;
+  font-size: 2.7rem;
+  margin: 0;
+  padding: 1.5rem 2rem;
+}
+.header .logo{
+  font-size: 3rem;
+}
+.footer{
+  font-size:1.9rem;
+}
+.footer h4{
+  font-size:2.5rem;
+}
+.confession-card p{
+  font-size: 2rem;
+}
+.confession-card .feed-ct{
+  font-size: 1.5rem;
+}
+.search-box{
+  height:4rem;
+}
+.submission-container h3{
+  font-size: 2.2rem;
+}
+.submission-container p{
+  font-size: 1.8rem;
+}
+.delete-container{
+  width: 97%;
+}
+.delete-container p{
+font-size:16px;
+}
+.talent-box {
+  width: calc(50% - 40px);
+}
+.copy-overlay{
+  font-size: 14px;
+}
+} 
+
+@media (max-width: 450px) {
+html {
+  font-size: 50%;
+}
+#playsound{
+  bottom:60px;
+}
+#characterCount {
+  font-size: 12px;
+}
+.index-cb{
+  width: auto;
+  height:1.5rem;
+}
+.container-index h1{
+  font-size: 3.3rem;
+}
+.container-index label{
+  font-size: 1.6rem;
+}
+.container-index p{
+  font-size:1.5rem;
+}
+.confession-box{
+  width:35rem;
+  height:15rem;
+}
+.container{
+  width: 95%;
+  padding-right:11px;
+  padding-left:11px;
+}
+.spaace{
+  height:20vh;
+}
+.confession-card p{
+  font-size: 2rem;
+}
+.confession-card .feed-ct{
+  font-size: 12px;
+}
+.search-box{
+  height: 4rem;
+}
+.submission-container{
+  width: 90%;
+}
+.talent-box {
+  width: 100%;
+}
+.talent-box h2{
+  font-size: 3rem;
+}
+.submit-talent-section{
+  width: 90%;
+}
+.submit-talent-section:hover {
+  transform: translateY(-10px);
+}
+.submit-talent-section h2{
+  font-size: 3rem;
+}
+.talent-song-container b{
+  font-size: 2.5rem;
+}
+.talent-song-container p{
+  font-size: 1.5rem;
+}
+.lines{
+  white-space:normal;
+}
+}
+
+
+/* Navigation bar */
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  background: #FFF8DC;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  padding: 1.4rem;
+}
+.header .logo {
+  font-size: 1.9rem;
+  padding-left: .5rem;
+  text-decoration: none;
+}
+.header .navbar a{
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+#menu-btn {
+  font-size: 3rem;
+  cursor: pointer;
+  display: none;
+}
+.nav-item:hover{
+  color: #000000;
+}
+
+
+/* Footer */
+.footer{
+  position: sticky;
+  bottom: 0;
+  text-align:center;
+  margin-top: 5px;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  width: 100%;
+  background-color: #FFF8DC;
+}
+.footer a:hover{
+  color:#000000;
+  text-decoration: none;
+}
+
+
+.spaace{
+  height:4vh;
+}
+.spaaace{
+  height:15vh;
+}
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+		integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="/style.css"/>
+	<link rel="icon" href="Images/conversation.png">
+	<title>Celestial Chat room</title>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <section>
+    <header class="header">
+      <div id="menu-btn" class="fas fa-bars"></div>
+      <a href="/" class="logo nav-item" id="logo">
+        <img src="/assets/1.png" width="50px" height="50px" /> Trinity
+        Confession</a>
+      <nav class="navbar" id="navbar">
+        <a href="https://celestial-trinity.onrender.com/" class="nav-item">Home</a>
+        <a href="https://celestial-trinity.onrender.com/feed" class="nav-item">Confessions</a>
+        <a href="/" class="nav-item">Chat Room</a>
+        <a href="https://celestial-trinity.onrender.com/talents" class="nav-item">Talents</a>
+        <a href="https://celestial-trinity.onrender.com/deleteconfession" class="nav-item">Delete Confession</a>
+      </nav>
+    </header>
+  </section>
+	<div class="join-container">
+		<header class="join-header">
+			<h1> <img src="Images/chat-icon.png" width="40px" class="logo-img"> Celestial Chat</h1>
+		</header>
+		<main class="join-main">
+			<form action="chat.html">
+				<div class="form-control">
+					<label for="username">Username</label>
+					<input type="text" name="username" id="username" placeholder="Enter username..." required />
+				</div>
+				<div class="form-control">
+					<label for="room">Room</label>
+					<input type="text" name="room" id="room"  value="General" readonly>
+				</div>
+				<button type="submit" class="btn">Join Chat</button>
+			</form>
+		</main>
+	</div>
+	<footer>
+		<div class="footer-container">
+		  <h4>Created by soil</h4>
+		</div>
+	</footer>
+</body>
+
+</html>
